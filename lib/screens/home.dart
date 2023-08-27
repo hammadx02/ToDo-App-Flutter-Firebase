@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
+
 import 'package:flutter/material.dart';
 import 'package:todo_app/widgets/todo_items.dart';
 import '../constants/colors.dart';
@@ -29,8 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: ListView(
               shrinkWrap: true,
-              padding: EdgeInsets.all(16),
-              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              physics: const BouncingScrollPhysics(),
               children: [
                 searchBox(),
                 const SizedBox(
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                TodoItems(),
+                const TodoItems(),
               ],
             ),
           ),
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 ElevatedButton(
